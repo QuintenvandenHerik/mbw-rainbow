@@ -9,6 +9,7 @@ $totalHoursPercentage = 0;
 <div class="container">
 
     <a href="/" class="btn btn-outline-secondary">Terug</a>
+    <a href="/changepassword" class="btn btn-outline-primary row-fix">Wachtwoord veranderen</a>
 
     <br><br>
 

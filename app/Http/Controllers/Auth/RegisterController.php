@@ -66,7 +66,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['string', 'min:8'],
-            'checkbox' => ['required', 'max:1']
+            'checkbox' => ['required']
         ]);
     }
 
@@ -84,20 +84,20 @@ class RegisterController extends Controller
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'password' =>  Hash::make(str_random(8)),
+                'password' => Hash::make($data['password']),
                 'role' => User::CLIENT_TYPE,
             ]);
             } elseif ($data['checkbox'] == "2") {
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'password' => Hash::make(str_random(8)),
+                'password' => Hash::make($data['password']),
                 'role' => User::ADMIN_TYPE,
             ]); } else {
             return User::create([
                 'name' => $data['name'],
                 'email' => $data['email'],
-                'password' => Hash::make(str_random(8)),
+                'password' => Hash::make($data['password']),
                 'role' => User::STUDENT_TYPE,
             ]);
         }

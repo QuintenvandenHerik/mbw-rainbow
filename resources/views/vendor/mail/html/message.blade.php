@@ -8,13 +8,9 @@
 
 
     {{-- Body --}}
-    {{ "Hier is je automatisch gegenereerde wachtwoord:" }}
-    <br>
-    {{ "Klik hieronder om in te loggen op je account" }}
+    {{ "Ga nu naar ... om in te loggen en je wachtwoord te veranderen" }}
     <br>
     <br>
-    {{ config('app.url') }}
-
 
 
     {{-- Footer --}}

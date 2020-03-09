@@ -26,8 +26,6 @@
                                 @endif
                             </div>
                         </div>
-
-                        <!-- uncomment this if admin account gets lost and you need a quick way to add a new user
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
